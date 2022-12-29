@@ -4,7 +4,7 @@
 
 ## 소개
 
-우선 마크다운 라이브러리로 [이 라이브러리를](https://github.com/sindresorhus/github-markdown-css) 사용할건데요.  
+우선 마크다운 라이브러리로 [이 라이브러리를](https://github.com/jyeonjyan/blog-archive/blob/main/assets/13/tistory-select-docs-type.png) 사용할건데요.  
 오픈소스는 저 링크⬆️ 에서 확인하시고, 세팅은 짧게 블로그 내용만 참고하시면 됩니다.
 
 ## Get Start
