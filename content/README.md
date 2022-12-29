@@ -17,4 +17,4 @@ tistory-markdown은 github-markdown과 다르게 파일 상대경로 파싱을 �
 원격경로: https://github.com/jyeonjyan/blog-archive/blob/main/assets/13/tistory-select-docs-type.png
 ```
 
-어차피 깃허브에 올라갈(`git push`) 이미지의 원격 주소는 다음과 같은 convention으로 업로드 되기에 예측샷으로 경로를 참조시키는 것이 지금으로써 가장 빠른 솔루션이라고 볼 수 있다.
+어차피 깃허브에 올라갈(`git push`) 이미지의 원격 주소는 다음과 같은 convention으로 업로드 되기에 예측샷으로 `<img src="">`의 경로(src)를 참조시키는 것이 지금으로써 가장 빠른 솔루션이라고 볼 수 있다.
