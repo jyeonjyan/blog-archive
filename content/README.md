@@ -1,7 +1,7 @@
 # upload convention
 
 ## directory convention
-업로드 하고자 하는 post의 number(`-p`)를 넣어 `post-p`와 같이 디렉토리를 만든 후 하위에 작업한다. (이때 `-p`는 `1` 이다.)  
+업로드 하고자 하는 post의 number(`-p`)를 넣어 `post-p`와 같이 디렉토리를 만든 후 하위에 작업한다.  
 e.g
 ```markdown
 /post-1
