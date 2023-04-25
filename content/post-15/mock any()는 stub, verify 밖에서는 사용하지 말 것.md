@@ -59,13 +59,13 @@ Mocking methods declared on non-public parent classes is not supported.
 
 음 이 에러가 뜨는 이유가 뭘까?  
 
-이 오류가 발생하면 이 예외가 발생할 수 있는 여러 케이스들을 모두 안내해주기 때문에 어디가 잘못됐는지 쉽게 발견하기 어렵다.
+이 오류가 발생하면 이 예외가 발생할 수 있는 여러 케이스들을 모두 안내해주기 때문에 어디가 잘못 됐는지 쉽게 발견하기 어렵다.
 
 여기서는 `You cannot use argument matchers outside of verification or stubbing.` 문장에 집중해야한다. **`verification or stubbing` 에서만 `argument matchers` 사용이 가능하다고 볼 수 있다.**
 
-내가 위에 작성한 테스트코드의 차근차근 살펴보자 
+이 내용을 기반으로 내가 위에 작성한 테스트 코드를 차근차근 뜯어보자 
 * `stubbing` 부분에서 (`every { someObj.findSomething(any()) }`) 사용한 `argument matchers` = `any()`는 mock 객체에 stubbing을 수행하며 사용한것이기에 문제가 없다.
-* 테스트 함수(`SUT`)를 호출하는 부분(에러에서 말하는 outside)에서 `sut.doA(anyString())` `anyString()` 이라는 `argument matchers` 를 사용한게 잘못된거였다.
+* 테스트 함수(`SUT`)를 호출하는 부분(**에러에서 말하는 outside**)에서 `sut.doA(anyString())` `anyString()` 이라는 `argument matchers` 를 사용한 것은 문제가 있다.
 
 그렇다면 아래와 같이 코드를 수정할 수 있다.
 ```kotlin
@@ -84,7 +84,7 @@ fun thisTestWillBeFail() {
 }
 ```
 
-이렇게 되면 테스트 대상(SUT)에는 mock library에서 제공하는 `argument matchers`를 사용하지 않음으로써 해당 오류를 해결할 수 있게 된다.
+이렇게 되면 테스트 대상(SUT)에 문자열 `"blah blah"`를 실제로 전달하여, mock 라이브러리에서 제공하는 `argument matcher`를 사용하지 않게 되고, 이를 통해 해당 오류를 궁극적으로 해결할 수 있게 됩니다.
 
 ### ps
 
