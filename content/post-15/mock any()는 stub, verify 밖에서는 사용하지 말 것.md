@@ -28,7 +28,7 @@ fun thisTestWillBeFail() {
 ```
 
 이 테스트는 아래와 같은 오류를 내며 결국 실패한다.
-```
+```plain_text
 Failed to load ApplicationContext
 java.lang.IllegalStateException: Failed to load ApplicationContext
 
