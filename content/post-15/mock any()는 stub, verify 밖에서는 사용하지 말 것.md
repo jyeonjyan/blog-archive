@@ -71,7 +71,7 @@ Mocking methods declared on non-public parent classes is not supported.
 ```kotlin
 @Test
 @DisplayName("이 테스트는 성공한다.")
-fun thisTestWillBeFail() {
+fun thisTestWillBeSuccess() {
     // stubbing
     val someObj = mockk<SomethingObj>()
     every { someObj.findSomething(any()) } returns "Something"
@@ -89,7 +89,10 @@ fun thisTestWillBeFail() {
 ### ps
 
 Q: 근데.. 첫번째 제시해준 테스트도 어쩔때는 성공하고 어쩔때는 실패해요..!  
-A: 내 로컬에서도 간헐적으로 그런 현상이 발생했다. 근데 간헐적으로 성공하는 이유를 알아내는것 그리고 그 노력은 중요하지 않다. verify, stub을 제외하고는 사용하지 않는게 맞기 때문이다.
+A: 내 로컬에서도 간헐적으로 이런 현상이 발생했다. 근데 간헐적으로 성공하는 이유를 알아내는것 그리고 그 노력은 사실 필요가 없다. 공식적으로 verified/stubbed method 밖에서는 사용하지 않는게 맞기 때문이다.
 
+내가 사용한 [springmockk](https://github.com/Ninja-Squad/springmockk) 라이브러리는 내부적으로 mockito와 mockk 라이브러리를 적절히 버무려 구현되어 있다. 이 포스트에 전반적 내용을 다룬 공식문서는 아래를 참고하자. Mockk 보다 자세히 기재되어 있는 Mockito 공식문서를 참고하자.
+
+* [Mockito Argument matchers / Warning on argument matchers](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#3)
 
 읽어주셔서 감사합니다.
