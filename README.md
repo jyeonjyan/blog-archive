@@ -1,6 +1,6 @@
 # Welcome to 개발지옥 tistory 
 
-[개발지옥 tistory](https://jyeonjyan.tistory.com/) 많은 방문 부탁드려요 ☺️
+[tistory](https://jyeonjyan.tistory.com/) 많은 방문 부탁드려요 ☺️
 
 ## 자주 묻는 질문
 ```
